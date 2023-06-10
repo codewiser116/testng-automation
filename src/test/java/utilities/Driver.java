@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class Driver {
     private static WebDriver driver;
-    private static String browserType = Config.getValue("browser");
+    private static String browserType = "firefox";
     public static WebDriver getDriver(){
         if (driver == null){
             if (browserType.equals("chrome")){
