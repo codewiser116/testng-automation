@@ -14,6 +14,7 @@ public class Google {
         Faker faker = new Faker();
         String testData = faker.lorem().word();
         Driver.getDriver().get("https://google.com");
+        System.out.println("tetsing");
         Driver.quit();
     }
 
