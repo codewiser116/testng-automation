@@ -1,10 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.testng.annotations.Test;
 import utilities.Driver;
 
 public class Google {
