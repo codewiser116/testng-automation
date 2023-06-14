@@ -11,6 +11,8 @@ import utilities.ApplicationFlow;
 import utilities.Config;
 import utilities.Driver;
 
+import java.util.Random;
+
 public class CashwiseHomeTests {
     Faker faker = new Faker();
 
@@ -41,6 +43,12 @@ public class CashwiseHomeTests {
             System.out.println(option.getText());
         }
         Assert.assertEquals(cashwiseHomePage.languageOptions.size(), 2);
+    }
+
+    @Test
+    public void frame(){
+        Random random = new Random();
+        System.out.println(random.nextInt(22));
     }
 
     @AfterMethod
