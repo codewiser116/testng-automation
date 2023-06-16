@@ -39,4 +39,20 @@ public class CashwiseHomePage {
 
     @FindBy(xpath = "//ul/li")
     public List<WebElement> languageOptions;
+
+    @FindBy(xpath = "(//input[@name='email'])[2]")
+    public WebElement signInEmailInput;
+
+    @FindBy(name = "password")
+    public WebElement signInPasswordInput;
+
+    @FindBy(xpath = "(//button[.='Sign in'])[2]")
+    public WebElement formSignInBtn;
+
+    public void login(String email, String password){
+        signInBtn.click();
+        signInEmailInput.sendKeys(email);
+        signInPasswordInput.sendKeys(password);
+        formSignInBtn.click();
+    }
 }

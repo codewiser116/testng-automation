@@ -46,10 +46,15 @@ public class CashwiseHomeTests {
     }
 
     @Test
-    public void frame(){
-        Random random = new Random();
-        System.out.println(random.nextInt(22));
+    public void login(){
+        CashwiseHomePage cashwiseHomePage = new CashwiseHomePage();
+        cashwiseHomePage.login("codewise@gmail.com", "123456");
+        ApplicationFlow.pause(4000);
+        String expectedURL = "https://cashwise.us/dashboard/infographics";
+        Assert.assertEquals(Driver.getDriver().getCurrentUrl(), expectedURL);
     }
+
+
 
     @AfterMethod
     public void cleanUp(){

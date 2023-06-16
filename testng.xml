@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="All Test Suite">
-    <test name="regression">
+<suite name="main automation">
+
+    <test name="smoke">
+        
         <classes>
-            <class name="cashwise.CashwiseHomeTests"></class>
-            <class name="studymate.StudyMateTests"></class>
+            <class name="cashwise.CashwiseHomeTests">
+                <methods>
+                    <include name="contactUs"/>
+                </methods>
+            </class>
+            <class name="studymate.StudyMateTests">
+                <methods>
+                    <include name="login"/>
+
+                </methods>
+            </class>
         </classes>
+
     </test>
+
 </suite>
