@@ -1,6 +1,7 @@
 package cashwise;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CashwiseDashboardPage;
@@ -13,6 +14,11 @@ public class CashwiseDashboardTests {
     @BeforeMethod
     public void setup(){
         Driver.getDriver().get(Config.getValue("cashwiseURL"));
+    }
+
+    @AfterMethod
+    public void cleanUp(){
+        Driver.quit();
     }
     @Test
     public void sideMenu(){

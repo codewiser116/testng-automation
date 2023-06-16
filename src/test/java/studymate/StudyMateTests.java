@@ -24,7 +24,7 @@ public class StudyMateTests {
     public void cleanUp(){
         Driver.quit();
     }
-    @Test
+    @Test(groups = {"smoke"})
     public void login(){
         StudyMateLoginPage studyMateLoginPage = new StudyMateLoginPage();
         studyMateLoginPage.emailInput.sendKeys(Config.getValue("studyMateEmail"));

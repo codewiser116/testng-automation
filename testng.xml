@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="main automation">
+<suite name="main automation" parallel="methods" thread-count="2">
 
-    <test name="smoke">
+    <test name="Regression">
         
         <classes>
-            <class name="cashwise.CashwiseHomeTests">
-                <methods>
-                    <include name="contactUs"/>
-                </methods>
-            </class>
-            <class name="studymate.StudyMateTests">
-                <methods>
-                    <include name="login"/>
-
-                </methods>
-            </class>
+            <class name="cashwise.CashwiseHomeTests"/>
+            <class name="studymate.StudyMateTests"/>
+            <class name="cashwise.CashwiseDashboardTests"/>
         </classes>
 
     </test>

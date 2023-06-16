@@ -22,7 +22,7 @@ public class CashwiseHomeTests {
     }
 
 
-    @Test
+    @Test(priority = 1)
     public void contactUs(){
         CashwiseHomePage cashwiseHomePage = new CashwiseHomePage();
 
@@ -34,7 +34,7 @@ public class CashwiseHomeTests {
         Assert.assertTrue(cashwiseHomePage.contactSubmittedPopup.isDisplayed());
     }
 
-    @Test
+    @Test(priority = 3)
     public void languageOptionsTest(){
         CashwiseHomePage cashwiseHomePage = new CashwiseHomePage();
 
@@ -45,7 +45,7 @@ public class CashwiseHomeTests {
         Assert.assertEquals(cashwiseHomePage.languageOptions.size(), 2);
     }
 
-    @Test
+    @Test(priority = 2, groups = {"smoke"})
     public void login(){
         CashwiseHomePage cashwiseHomePage = new CashwiseHomePage();
         cashwiseHomePage.login("codewise@gmail.com", "123456");
